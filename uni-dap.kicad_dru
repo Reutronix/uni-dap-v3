@@ -1,0 +1,37 @@
+(version 1)
+(rule "USB-C-exception"
+   (constraint clearance (min 0.15mm) (opt 0.2mm))
+   (constraint hole_clearance (min 0.15mm) (opt 0.2mm))
+   (condition "A.intersectsCourtyard('J301')")
+)
+(version 1)
+(rule "USB-C-exception"
+   (constraint clearance (min 0.15mm) (opt 0.2mm))
+   (constraint hole_clearance (min 0.15mm))
+   (condition "A.enclosedByArea('USB-C-rule-area')")
+)
+
+(version 1)
+(rule "increased connector clearance"
+   (constraint clearance (min 0.25mm) (opt 0.3mm))
+   (condition "A.intersectsCourtyard('J2')")
+   (condition "A.Layer_Bottom"))
+
+(version 1)
+(rule "increased connector clearance"
+   (constraint clearance (min 0.25mm) (opt 0.3mm))
+   (condition "A.intersectsCourtyard('J3')")
+   (condition "A.Layer_Bottom"))
+
+(version 1)
+(rule "SOT523-exception"
+   (constraint clearance (min 0.16mm) (opt 0.2mm))
+   (condition "A.enclosedByArea('sot_area')")
+)
+
+(version 1)
+(rule "QFN-Exception"
+   (constraint clearance (min 0.15mm) (opt 0.2mm))
+   (constraint hole_clearance (min 0.15mm))
+   (condition "A.enclosedByArea('QFN-area')")
+)
