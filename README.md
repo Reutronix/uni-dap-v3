@@ -2,9 +2,7 @@
 
 **Galvanically isolated CMSIS-DAP debug probe with USB-to-I²C/SPI/GPIO bridging.**
 
-<!-- TODO: confirm what "UniDAP" stands for (e.g. "Universal Debug Access Probe") and add a one-line tagline you like -->
-
-UniDAP is an open hardware debug/programming probe by [Reutronix](https://github.com/). It combines a full USB-isolated CMSIS-DAP probe (SWD + UART) with a USB-to-I²C/SPI/GPIO bridge, so a single USB-C cable gives you target programming, a serial console, general-purpose bus access, and isolated power — all on the far side of a galvanic isolation barrier.
+UniDAP is an open hardware debug/programming probe. It combines a full USB-isolated CMSIS-DAP probe (SWD + UART) with a USB-to-I²C/SPI/GPIO bridge, so a single USB-C cable gives you target programming, a serial console, general-purpose bus access, and isolated power — all on the far side of a galvanic isolation barrier.
 
 ![UniDAP](images/uni-dap.png)
 
@@ -134,7 +132,7 @@ UniDAP ships in a **standard configuration**; several jumpers/footprints let you
 
 ## Firmware
 
-The probe runs [DAPLink](https://github.com/ARMmbed/DAPLINK) (main branch) with local modifications.
+The probe runs [DAPLink](https://github.com/ARMmbed/DAPLINK) (main branch).
 
 - **Board ID:** `0080`
 - **Provides:** CMSIS-DAP (SWD) + a virtual UART bridge.
@@ -150,5 +148,5 @@ The STM32 can be programmed for the first time (or recovered when no USB bootloa
 
 ## Acknowledgements
 
-- [DAPLink](https://github.com/ARM-software/DAPLink) by Arm — the CMSIS-DAP firmware UniDAP is based on.
+- [DAPLink](https://github.com/ARMmbed/DAPLINK) by Arm — the CMSIS-DAP firmware UniDAP is based on.
 - WCH (CH347), Analog Devices (ADuM4160), TI (SN6505), Cypress/Infineon (CY7C65634).
